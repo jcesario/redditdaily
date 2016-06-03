@@ -16,20 +16,29 @@ func getremainder(i int) (remainder int) {
 	return remainder
 }
 
-func getordinal(i int) (o string) {
+func getordinal(i int) string {
 	var remainder int
+
+	switch i {
+	case 11:
+		return fmt.Sprintf("%dth", i)
+	case 12:
+		return fmt.Sprintf("%dth", i)
+	case 13:
+		return fmt.Sprintf("%dth", i)
+	}
 
 	remainder = getremainder(i)
 
 	switch remainder {
 	case 1:
-		return fmt.Sprintf("%dst", remainder)
+		return fmt.Sprintf("%dst", i)
 	case 2:
-		return fmt.Sprintf("%dnd", remainder)
+		return fmt.Sprintf("%dnd", i)
 	case 3:
-		return fmt.Sprintf("%drd", remainder)
+		return fmt.Sprintf("%drd", i)
 	default:
-		return fmt.Sprintf("%dth", remainder)
+		return fmt.Sprintf("%dth", i)
 	}
 }
 
