@@ -9,14 +9,6 @@ import (
 	"strings"
 )
 
-type President struct {
-	Name       string
-	BirthYear  int64
-	BirthPlace string
-	DeathYear  int64
-	DeathPlace string
-}
-
 func intRange(x int64, y int64) []int64 {
 	var out []int64
 	for i := x; i <= y; i++ {
